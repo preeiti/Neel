@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiest Birthday Neel</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: skyblue;
+            color: white;
+        }
+        h1 {
+            font-size: 50px;
+            text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
+        }
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .stage {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+        }
+        .cake {
+            position: absolute;
+            bottom: 20px;
+            width: 300px;
+            height: 200px;
+            background: #ff69b4;
+            border-radius: 20px;
+            box-shadow: 0 10px 0 #d63384;
+            border: 5px solid gold;
+        }
+        .cake::before {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 50px;
+            background: #ff4081;
+            top: -30px;
+            left: -10px;
+            border-radius: 10px;
+            border: 5px solid gold;
+        }
+        .candle {
+            position: absolute;
+            width: 15px;
+            height: 60px;
+            background: red;
+            top: -70px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .candle:nth-child(1) { left: 20%; }
+        .candle:nth-child(2) { left: 40%; }
+        .candle:nth-child(3) { left: 60%; }
+        .candle:nth-child(4) { left: 80%; }
+        .candle:nth-child(5) { left: 50%; }
+        .flame {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background: yellow;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            animation: flicker 0.5s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0.8; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happiest Birthday Neel! 🎉</h1>
+    <p>Happiest birthdayy to my sunshine! I love you... you are the best thing ever happened to me. btw im sooo excited for this to show youuu okok.. no ranting atleas not here Wish you lots of luck to get whatever you want from life and i love you.
+      i hope to marry you someday forsure!!!!!
+    </p>
+    
+    <div class="stage">
+        <div class="cake">
+            <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+            <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+            <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+            <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+            <div class="candle" onclick="blowCandle(this)"><div class="flame"></div></div>
+        </div>
+    </div>
+
+    <script>
+        function blowCandle(candle) {
+            const flame = candle.querySelector('.flame');
+            if (flame.style.display !== "none") {
+                flame.style.display = 'none';
+                alert("You blew out a candle! 🎂✨");
+            }
+        }
+    </script>
+
+</body>
+</html>
